@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./less/main.less">
+    <link rel="stylesheet" href="./less/rehab.less">
+    <link rel="stylesheet" href="css/animacionLoading.css">
+    <script defer src="js/animacionLoading.js"></script>
+</head>
+
+<body>
+    <aside class="loader-container" id="loader-container">
+        <div class="loader"></div>
+        <div class="loading-text">Cargando...</div>
+    </aside>
+    {{> header }}
+    <main>
+        {{> bodyrehab }}
+    </main>
+    {{> footer }}
+</body>
+
+</html>

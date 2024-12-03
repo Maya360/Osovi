@@ -1,0 +1,39 @@
+<div class="galeria">
+    <div class="imagen">
+        <img src="Imagenes/ayuda eventos.jpg" alt="Voluntariado 1">
+        <p>Ayuda en eventos comunitarios</p>
+    </div>
+    <div class="imagen">
+        <img src="Imagenes/apoyo en centros.jpg" alt="Voluntariado 2">
+        <p>Apoyo en centros de rehabilitación</p>
+    </div>
+    <div class="imagen">
+        <img src="Imagenes/actividades recreativas.jpg" alt="Voluntariado 3">
+        <p>Actividades recreativas para niños</p>
+    </div>
+</div>
+
+<h3>Formulario de Inscripción</h3>
+<form class="formulario-voluntariado">
+    <div class="form-group">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="name" name="name" required>
+        <div id="errorName" class="error-message"></div>
+    </div>
+    <div class="form-group">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        <div id="errorCorreo" class="error-message"></div>
+    </div>
+    <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        <div id="errorTelefono" class="error-message"></div>
+    </div>
+    <div class="form-group">
+        <label for="mensaje">¿Por qué quieres ser voluntario?</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <div id="errorMensaje" class="error-message"></div>
+    </div>
+    <button type="submit">Enviar</button>
+</form>

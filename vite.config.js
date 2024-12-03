@@ -3,7 +3,7 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
 
-  base: 'Osovi', 
+  base: '/Osovi', 
   plugins: [
     handlebars({
       // Carpeta donde estarán los parciales de Handlebars

@@ -5,5 +5,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (loaderContainer) {
             loaderContainer.style.display = 'none';
         }
-    }, 3000); // Tiempo en milisegundos
+    }, 500); // Tiempo en milisegundos
 });

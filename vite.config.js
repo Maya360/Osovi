@@ -3,7 +3,7 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
 
-  base: '/Osovi/', 
+  base: './Osovi', 
   plugins: [
     handlebars({
       // Carpeta donde estarán los parciales de Handlebars
@@ -26,7 +26,14 @@ export default defineConfig({
   build: {
     // Configuración de la salida (opcional)
     outDir: 'dist', // Carpeta donde se generarán los archivos de producción
-    assetsDir: 'assets', // Carpeta para los archivos estáticos dentro de dist
+   assetsDir: 'assets', // Carpeta para los archivos estáticos dentro de dist
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+    },
+ 
+ 
   },
   server: {
     

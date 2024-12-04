@@ -1,5 +1,20 @@
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
+import * as glob from "glob";
+import path from 'path';
+import { resolve } from 'path';
+
+
+const getHtmlEntries = () => {
+  return Object.fromEntries(
+    glob.sync('./**/*.html', { ignore: ['./dist/**', './node_modules/**'] }).map((file) => [
+      path.relative(__dirname, file).replace(/\\/g, '/'), // Use relative paths for cross-platform compatibility
+      resolve(__dirname, file),
+    ])
+  );
+};
+
+
 
 export default defineConfig({
 
@@ -24,17 +39,15 @@ export default defineConfig({
     },
   },
   build: {
-    // Configuración de la salida (opcional)
-    outDir: 'dist', // Carpeta donde se generarán los archivos de producción
-   assetsDir: 'assets', // Carpeta para los archivos estáticos dentro de dist
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
+      input: getHtmlEntries(), // Dynamically get all HTML files
     },
- 
- 
   },
+ 
+ 
+
   server: {
     
     port: 3000, // Cambia el puerto si lo necesitas
